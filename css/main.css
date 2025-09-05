@@ -1,0 +1,613 @@
+/* variables */
+:root {
+    --first-font-family: "Poppins", sans-serif;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --dark-blue-color-1: #263238;
+    --dark-blue-color-2: #2a3246;
+    --dark-blue-color-3: #546269;
+    --light-gray-color-1: #8f95a5;
+    --light-gray-color-2: #f5f5f5;
+    --light-gray-color-3: #eeeeee;
+}
+
+/* template tags */
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: var(--first-font-family);
+}
+
+/* fonts */
+.text-h1 {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 125%;
+    text-transform: capitalize;
+}
+
+.text-h2 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 167%;
+    text-transform: capitalize;
+}
+
+.text-h3 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 267%;
+    color: var(--dark-blue-color-1);
+}
+
+.text-p {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--light-gray-color-1);
+}
+
+/* general */
+.container {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.button {
+    width: 438px;
+    height: 118px;
+    border-radius: 15px;
+    background-color: var(--dark-blue-color-1);
+    transition: opacity 0.3s ease;
+    font-weight: 400;
+    font-size: 36px;
+    color: var(--white-color)
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+/* header */
+
+.header {
+    min-height: 900px;
+}
+
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 55px;
+}
+
+.header__logo {
+    align-self: center;
+    padding-left: 6px;
+    padding-bottom: 13px;
+}
+
+.header__nav {
+    display: block;
+}
+
+.header__nav-items {
+    display: flex;
+    padding-left: 7px;
+    padding-bottom: 7px;
+}
+
+.header__nav-items li:nth-child(1) {
+    margin-right: 38px;
+}
+
+.header__nav-items li:nth-child(2) {
+    margin-right: 33px;
+}
+
+.header__nav-items li:nth-child(3) {
+    margin-right: 58px;
+}
+
+.header__nav-items li:nth-child(4) {
+    margin-right: 31px;
+}
+
+.header__nav-item {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: var(--dark-blue-color-1);
+    transition: opacity 0.3s ease;
+}
+
+.header__nav-item:hover {
+    opacity: 0.5;
+}
+
+.header__button-wrap {
+    padding-right: 6px;
+}
+
+.header__button--primary {
+    width: 220px;
+    height: 70px;
+    border: 2px solid var(--dark-blue-color-1);
+    border-radius: 5px;
+    background-color: var(--white-color);
+    transition: background-color 0.3s ease;
+    text-transform: capitalize;
+    font-size: 24px;
+    color: var(--black-color);
+}
+
+.header__button--primary:hover {
+    background-color: var(--light-gray-color-3);
+}
+
+.header__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__bottom-left {
+    position: relative;
+    padding-left: 3px;
+    padding-top: 101px;
+}
+
+.header__image--primary {
+    position: absolute;
+    top: 193px;
+    left: 428px;
+}
+
+.header__title {
+    margin-bottom: 42px;
+}
+
+.header__text {
+    max-width: 570px;
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 64px;
+}
+
+.header__bottom-right {
+    padding-top: 51px;
+}
+
+/* skills */
+
+.skills {
+    min-height: 1200px;
+}
+
+.skills__container {
+    max-width: 1340px;
+}
+
+.skills__title {
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 92px;
+}
+
+.skills__cards {
+    display: grid;
+    grid-template-areas: 
+    "one two three"
+    "one four four";
+    gap: 18px;
+}
+
+.skills__card {
+    border-radius: 10px;
+    background-color: var(--light-gray-color-2);
+}
+
+.skills__card--1 {
+    grid-area: one;
+    min-height: 894px;
+}
+
+.skills__card--2 {
+    grid-area: two;
+    min-height: 531px;
+}
+
+.skills__card--3 {
+    grid-area: three;
+    min-height: 532px;
+}
+
+.skills__card--4 {
+    grid-area: four;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    min-height: 343px;
+}
+
+.skills__card--1 .skills__image-wrap {
+    margin-bottom: 6px;
+}
+
+.skills__card--3 .skills__image-wrap {
+    margin-bottom: 17px;
+}
+
+.skills__card--1 .skills__card-image {
+    padding-top: 39px;
+    padding-left: 20px;
+}
+
+.skills__card--2 .skills__card-image {
+    padding-left: 120px;
+}
+
+.skills__card--3 .skills__card-image {
+    padding-top: 12px;
+}
+
+.skills__card--4 .skills__card-image {
+    padding-top: 48px;
+    padding-right: 30px;
+}
+
+.skills__card--1 .skills__content {
+    padding-left: 39px;
+}
+
+.skills__card--2 .skills__content {
+    padding-left: 40px;
+}
+
+.skills__card--3 .skills__content {
+    padding-left: 40px;
+}
+
+.skills__card--4 .skills__content {
+    padding-top: 65px;
+    padding-left: 43px;
+}
+
+.skills__card--1 .skills__card-title {
+    margin-bottom: 4px;
+}
+
+.skills__card--2 .skills__card-title {
+    line-height: 25%;
+    margin-bottom: 26px;
+}
+
+.skills__card--3 .skills__card-title {
+    line-height: 150%;
+    margin-bottom: 5px;
+}
+
+.skills__card--4 .skills__card-title {
+    line-height: 150%;
+    padding-left: 5px;
+    margin-bottom: 14px;
+}
+
+.skills__card-text {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.skills__card--1 .skills__card-text {
+    max-width: 347px;
+    margin-bottom: 35px;
+}
+
+.skills__card--2 .skills__card-text {
+    max-width: 347px;
+    margin-bottom: 33px;
+}
+
+.skills__card--3 .skills__card-text {
+    max-width: 373px;
+    margin-bottom: 33px;
+}
+
+.skills__card--4 .skills__card-text {
+    max-width: 345px;
+    padding-left: 5px;
+    margin-bottom: 24px;
+}
+
+.skills__card-button {
+    width: 230px;
+    height: 60px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills__card--2 .skills__card-button,
+.skills__card--3 .skills__card-button,
+.skills__card--4 .skills__card-button {
+    width: 219px;
+    font-size: 20px;
+}
+
+/* about us */
+
+.about-us {
+    min-height: 800px;
+}
+
+.about-us__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.about-us__left {
+    padding-left: 5px;
+}
+
+.about-us__title {
+    padding-top: 92px;
+    margin-bottom: 23px;
+}
+
+.about-us__text {
+    max-width: 635px;
+    margin-bottom: 40px;
+    line-height: normal;
+}
+
+.about-us__numbers {
+    display: flex;
+    text-align: center;
+}
+
+.about-us__pupils {
+    margin-right: 142px;
+}
+
+.about-us__number {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 167%;
+    color: var(--dark-blue-color-2);
+}
+
+.about-us__languages .about-us__number {
+    padding-right: 18px;
+}
+
+.about-us__teachers {
+    margin-right: 98px;
+}
+
+.about-us__image {
+    padding-top: 62px;
+    padding-right: 15px;
+}
+
+/* pricing */
+
+.pricing {
+    min-height: 900px;
+}
+
+.pricing__title {
+    text-align: center;
+    padding-top: 52px;
+    margin-bottom: 55px;
+}
+
+.pricing__cards {
+    display: flex;
+}
+
+.pricing__card--1 {
+    padding-left: 5px;
+}
+
+.pricing__card--2 {
+    padding-left: 50px;
+}
+
+.pricing__card--3 {
+    padding-left: 4px;
+}
+
+.pricing__card--1 .pricing__card-image {
+    padding-left: 25px;
+    margin-bottom: 42px;
+}
+
+.pricing__card--2 .pricing__card-image {
+    padding-top: 26px;
+    margin-bottom: 43px;
+}
+
+.pricing__card--3 .pricing__card-image {
+    padding-left: 50px;
+    margin-bottom: 13px;
+}
+
+.pricing__card-title {
+    line-height: 160%;
+}
+
+.pricing__card--1 .pricing__card-title {
+    margin-bottom: 17px;
+}
+
+.pricing__card--2 .pricing__card-title {
+    padding-left: 2px;
+    margin-bottom: 22px;
+}
+
+.pricing__card--3 .pricing__card-title {
+    margin-bottom: 18px;
+}
+
+.pricing__card-text {
+    max-width: 425px;
+    line-height: normal;
+    margin-bottom: 60px;
+}
+
+.pricing__card--1 .pricing__card-text {
+    margin-bottom: 30px;
+}
+
+.pricing__price {
+    display: flex;
+    align-items: center;
+    width: 240px;
+    height: 45px;
+    background-color: var(--light-gray-color-3);
+}
+
+.pricing__card--1 .pricing__price {
+    padding-left: 25px;
+    gap: 14px;
+}
+
+.pricing__card--2 .pricing__price {
+    padding-left: 24px;
+    gap: 8px;
+}
+
+.pricing__card--3 .pricing__price {
+    padding-left: 16px;
+    gap: 7px;
+}
+
+.pricing__price-num {
+    font-weight: 400;
+    font-size: 30px;
+    color: var(--dark-blue-color-1);
+}
+
+.pricing__price-period {
+    font-size: 18px;
+    color: var(--dark-blue-color-3);
+}
+
+/* contact us */
+
+.contact-us {
+    min-height: 680px;
+}
+
+.contact-us__container {
+    max-width: 1377px;
+}
+
+.contact-us__wrap {
+    display: flex;
+    gap: 112px;
+    padding-top: 100px;
+}
+
+.contact-us__image {
+    padding-top: 30px;
+}
+
+.contact-us__title {
+    padding-top: 63px;
+    margin-bottom: 37px;
+}
+
+.contact-us__text {
+    max-width: 776px;
+    line-height: normal;
+    margin-bottom: 50px;
+}
+
+.contact-us__form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-us__email {
+    width: 450px;
+    height: 80px;
+    border: 1px solid var(--light-gray-color-1);
+    border-radius: 10px;
+    padding: 33px;
+}
+
+.contact-us__button {
+    width: 264px;
+    height: 80px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* footer */
+
+.footer {
+    min-height: 180px;
+}
+
+.footer__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+}
+
+.footer__logo {
+    padding-left: 8px;
+}
+
+.footer__links-wrap {
+    padding-top: 31px;
+    padding-right: 3px;
+}
+
+.footer__privacy-policy-items {
+    display: flex;
+    gap: 5px;
+}
+
+.footer__privacy-policy-item {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 24px;
+}
+.footer__privacy-policy-item:hover {
+    color: var(--dark-blue-color-3);
+}
