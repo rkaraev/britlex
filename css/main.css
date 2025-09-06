@@ -73,6 +73,7 @@ body {
 .text-p {
     font-weight: 400;
     font-size: 20px;
+    line-height: normal;
     color: var(--light-gray-color-1);
 }
 
@@ -91,7 +92,7 @@ body {
     transition: opacity 0.3s ease;
     font-weight: 400;
     font-size: 36px;
-    color: var(--white-color)
+    color: var(--white-color);
 }
 
 .button:hover {
@@ -199,7 +200,6 @@ body {
 .header__text {
     max-width: 570px;
     font-size: 24px;
-    line-height: normal;
     margin-bottom: 64px;
 }
 
@@ -386,8 +386,7 @@ body {
 
 .about-us__text {
     max-width: 635px;
-    margin-bottom: 40px;
-    line-height: normal;
+    margin-bottom: 45px;
 }
 
 .about-us__numbers {
@@ -402,7 +401,7 @@ body {
 .about-us__number {
     font-weight: 600;
     font-size: 48px;
-    line-height: 167%;
+    line-height: 150%;
     color: var(--dark-blue-color-2);
 }
 
@@ -425,6 +424,10 @@ body {
     min-height: 900px;
 }
 
+.pricing__container {
+    max-width: 1340px;
+}
+
 .pricing__title {
     text-align: center;
     padding-top: 52px;
@@ -433,83 +436,61 @@ body {
 
 .pricing__cards {
     display: flex;
+    justify-content: space-between;
 }
 
-.pricing__card--1 {
-    padding-left: 5px;
-}
-
-.pricing__card--2 {
-    padding-left: 50px;
-}
-
-.pricing__card--3 {
-    padding-left: 4px;
+.pricing__card-image-wrap {
+    height: 350px;
 }
 
 .pricing__card--1 .pricing__card-image {
     padding-left: 25px;
-    margin-bottom: 42px;
 }
 
 .pricing__card--2 .pricing__card-image {
     padding-top: 26px;
-    margin-bottom: 43px;
+    padding-left: 20px;
 }
 
 .pricing__card--3 .pricing__card-image {
-    padding-left: 50px;
-    margin-bottom: 13px;
+    padding-left: 49px;
 }
 
 .pricing__card-title {
-    line-height: 160%;
-}
-
-.pricing__card--1 .pricing__card-title {
-    margin-bottom: 17px;
-}
-
-.pricing__card--2 .pricing__card-title {
-    padding-left: 2px;
+    line-height: 150%;
+    padding-top: 3px;
     margin-bottom: 22px;
 }
 
-.pricing__card--3 .pricing__card-title {
-    margin-bottom: 18px;
+.pricing__card--2 .pricing__card-title {
+    padding-left: 25px;
 }
 
 .pricing__card-text {
-    max-width: 425px;
-    line-height: normal;
+    max-width: 435px;
     margin-bottom: 60px;
 }
 
 .pricing__card--1 .pricing__card-text {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
+}
+
+.pricing__card--2 .pricing__card-text {
+    padding-left: 25px;
 }
 
 .pricing__price {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
     width: 240px;
     height: 45px;
     background-color: var(--light-gray-color-3);
 }
 
-.pricing__card--1 .pricing__price {
-    padding-left: 25px;
-    gap: 14px;
-}
-
 .pricing__card--2 .pricing__price {
-    padding-left: 24px;
-    gap: 8px;
-}
-
-.pricing__card--3 .pricing__price {
-    padding-left: 16px;
-    gap: 7px;
+    margin-left: 25px;
 }
 
 .pricing__price-num {
@@ -550,7 +531,6 @@ body {
 
 .contact-us__text {
     max-width: 776px;
-    line-height: normal;
     margin-bottom: 50px;
 }
 
@@ -586,7 +566,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 24px;
+    padding-top: 19px;
 }
 
 .footer__logo {
@@ -610,4 +590,12 @@ body {
 }
 .footer__privacy-policy-item:hover {
     color: var(--dark-blue-color-3);
+}
+
+/* media */
+@media screen and (max-width: 1599px) {
+    .container {
+        max-width: 95%;
+    }
+
 }
