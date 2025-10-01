@@ -147,7 +147,6 @@ body {
 .header__nav-item {
     text-decoration: none;
     text-transform: capitalize;
-    font-weight: 400;
     color: var(--dark-blue-color-1);
     transition: opacity 0.3s ease;
 }
@@ -594,8 +593,94 @@ body {
 
 /* media */
 @media screen and (max-width: 1599px) {
+
     .container {
         max-width: 95%;
     }
+}
 
+@media screen and (max-width: 1280px) {
+
+    .text-h1 {
+        font-size: 48px;
+    }
+
+    .text-h2 {
+        font-size: 36px;
+    }
+
+    .text-h3 {
+        font-size: 22px;
+    }
+
+    .text-p {
+        font-size: 16px;
+    }
+
+    .button {
+        font-size: 24px;
+        width: 292px;
+        height: 80px;
+    }
+
+    .header__image--primary {
+        left: 280px;
+        height: 100px;
+    }
+
+    .header__button--primary {
+        font-size: 18px;
+        width: 160px;
+        height: 50px;
+    }
+
+    .header__text {
+        font-size: 20px;
+    }
+
+    .skills__card-text {
+        font-size: 14px;
+    }
+
+    .skills__card-button {
+        font-size: 18px;
+        width: 196px;
+        height: 57px;
+    }
+
+    .skills__card--2 .skills__card-button,
+    .skills__card--3 .skills__card-button,
+    .skills__card--4 .skills__card-button {
+        font-size: 18px;
+        width: 196px;
+        height: 57px;
+    }
+
+    .about-us__number {
+        font-size: 30px;
+    }
+
+    .pricing__price-num {
+        font-size: 24px;
+    }
+
+    .pricing__price-period {
+        font-size: 16px;
+    }
+
+    .contact-us__email {
+        width: 323px;
+        height: 60px;
+        padding: 28px;
+    }
+
+    .contact-us__button {
+        font-size: 16px;
+        width: 193px;
+        height: 60px;
+    }
+
+    .footer__privacy-policy-item {
+        font-size: 16px;
+    }
 }
