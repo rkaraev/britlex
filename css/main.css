@@ -14,6 +14,7 @@
 /* template tags */
 html {
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 *, *::before, *::after {
@@ -51,28 +52,28 @@ body {
 /* fonts */
 .text-h1 {
     font-weight: 600;
-    font-size: 64px;
+    font-size: 4rem;
     line-height: 125%;
     text-transform: capitalize;
 }
 
 .text-h2 {
     font-weight: 600;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 167%;
     text-transform: capitalize;
 }
 
 .text-h3 {
     font-weight: 600;
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 267%;
     color: var(--dark-blue-color-1);
 }
 
 .text-p {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: normal;
     color: var(--light-gray-color-1);
 }
@@ -91,7 +92,7 @@ body {
     background-color: var(--dark-blue-color-1);
     transition: opacity 0.3s ease;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 2.25rem;
     color: var(--white-color);
 }
 
@@ -167,7 +168,7 @@ body {
     background-color: var(--white-color);
     transition: background-color 0.3s ease;
     text-transform: capitalize;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--black-color);
 }
 
@@ -198,7 +199,7 @@ body {
 
 .header__text {
     max-width: 570px;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 64px;
 }
 
@@ -322,7 +323,7 @@ body {
 }
 
 .skills__card-text {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 150%;
 }
 
@@ -352,14 +353,14 @@ body {
     height: 60px;
     border-radius: 5px;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .skills__card--2 .skills__card-button,
 .skills__card--3 .skills__card-button,
 .skills__card--4 .skills__card-button {
     width: 219px;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 /* about us */
@@ -399,7 +400,7 @@ body {
 
 .about-us__number {
     font-weight: 600;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 150%;
     color: var(--dark-blue-color-2);
 }
@@ -494,19 +495,19 @@ body {
 
 .pricing__price-num {
     font-weight: 400;
-    font-size: 30px;
+    font-size: 1.875rem;
     color: var(--dark-blue-color-1);
 }
 
 .pricing__price-period {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--dark-blue-color-3);
 }
 
 /* contact us */
 
 .contact-us {
-    min-height: 680px;
+    min-height: 685px;
 }
 
 .contact-us__container {
@@ -552,7 +553,7 @@ body {
     height: 80px;
     border-radius: 10px;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 /* footer */
@@ -565,7 +566,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 19px;
+    padding-top: 15px;
 }
 
 .footer__logo {
@@ -585,7 +586,7 @@ body {
 .footer__privacy-policy-item {
     text-decoration: none;
     transition: color 0.3s ease;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 .footer__privacy-policy-item:hover {
     color: var(--dark-blue-color-3);
@@ -601,86 +602,140 @@ body {
 
 @media screen and (max-width: 1280px) {
 
-    .text-h1 {
-        font-size: 48px;
-    }
-
-    .text-h2 {
-        font-size: 36px;
-    }
-
-    .text-h3 {
-        font-size: 22px;
-    }
-
-    .text-p {
-        font-size: 16px;
+    html {
+        font-size: 13px;
     }
 
     .button {
-        font-size: 24px;
         width: 292px;
         height: 80px;
     }
 
-    .header__image--primary {
-        left: 280px;
-        height: 100px;
-    }
-
     .header__button--primary {
-        font-size: 18px;
         width: 160px;
         height: 50px;
     }
 
+    .header__image--primary {
+        height: 80px;
+        left: 320px;
+    }
+
     .header__text {
-        font-size: 20px;
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    html {
+        font-size: 11px;
     }
 
-    .skills__card-text {
-        font-size: 14px;
+    .header__title {
+        margin-bottom: 20px;
     }
 
-    .skills__card-button {
-        font-size: 18px;
-        width: 196px;
-        height: 57px;
+    .header__text {
+        margin-bottom: 30px;
     }
 
-    .skills__card--2 .skills__card-button,
-    .skills__card--3 .skills__card-button,
-    .skills__card--4 .skills__card-button {
-        font-size: 18px;
-        width: 196px;
-        height: 57px;
+    .header__bottom {
+        align-items: center;
     }
 
-    .about-us__number {
-        font-size: 30px;
+    .header__bottom-left {
+        padding-top: 50px;
     }
 
-    .pricing__price-num {
-        font-size: 24px;
+    .header__bottom-right {
+        padding-top: 25px;
     }
 
-    .pricing__price-period {
-        font-size: 16px;
+    .header__image--primary {
+        left: 250px;
+        top: 145px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    html {
+        font-size: 10px;
     }
 
-    .contact-us__email {
-        width: 323px;
+    .header__image--primary {
         height: 60px;
-        padding: 28px;
+        left: 210px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .header__top {
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .contact-us__button {
-        font-size: 16px;
-        width: 193px;
-        height: 60px;
+    .header__nav-items {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
     }
 
-    .footer__privacy-policy-item {
-        font-size: 16px;
+    .header__nav-items li:nth-child(1) {
+        margin-right: 0;
+    }
+    
+    .header__nav-items li:nth-child(2) {
+        margin-right: 0;
+    }
+    
+    .header__nav-items li:nth-child(3) {
+        margin-right: 0;
+    }
+    
+    .header__nav-items li:nth-child(4) {
+        margin-right: 0;
+    }
+
+    .header__bottom {
+        flex-direction: column-reverse;
+    }
+
+    .header__bottom-left {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .header__bottom-right {
+        padding-top: 0;
+    }
+
+    .header__title br {
+        display: none;
+    }
+
+    .header__image--primary {
+        display: none;
+    }
+    
+    .header__image--secondary {
+        max-height: 500px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    html {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    html {
+        font-size: 6px;
     }
 }
